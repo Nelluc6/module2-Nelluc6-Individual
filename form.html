@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form method="get" action="calculator.php">
+        <label for="number1">Number 1:</label>
+        <input type="number" name="number1" id="number1" step="any" required>
+        <br><br>
+        <label for="number2">Number 2:</label>
+        <input type="number" name="number2" id="number2" step="any" required>
+        <br><br>
+        <label>Operation:</label>
+        <input type="radio" name="operation" id="add" value="add" required>
+        <label for="add">Addition</label>
+        <input type="radio" name="operation" id="subtract" value="subtract" required>
+        <label for="subtract">Subtraction</label>
+        <input type="radio" name="operation" id="multiply" value="multiply" required>
+        <label for="multiply">Multiplication</label>
+        <input type="radio" name="operation" id="divide" value="divide" required>
+        <label for="divide">Division</label>
+        <br><br>
+        <input type="submit" value="Calculate">
+    </form>
+    
+</body>
+</html>
