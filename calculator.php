@@ -7,7 +7,7 @@
     <title>PHP Calculator</title>
 </head>
 <body>
-<h1>CALCULATOR</h1>
+<h1>CALCULATOR OUTPUT</h1>
 <?php
     $num1 = floatval($_GET["number1"]);
     $num2 = floatval($_GET["number2"]);
@@ -35,7 +35,8 @@
             break;
     }
     //output result here
-    echo "Result: $result";
+    $output = htmlentities($result);
+    echo "Result: $output";
 
 ?>
     
