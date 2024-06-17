@@ -29,11 +29,33 @@
     </form>
 
 <?php
-    $num1 = floatval($_GET['number1']);
-    $num2 = floatval($_GET['number2']);
-    $operationType = $_GET['operation'];
-
-
+    $num1 = floatval($_GET["number1"]);
+    $num2 = floatval($_GET["number2"]);
+    $operationType = $_GET["operation"];
+    $result = "";
+    switch($operationType) {
+        case "add":
+            $result = $num1 + $num2;
+            break;
+        case "subtract":
+            $result = $num1 - $num2;
+            break;
+        case "multiply":
+            $result = $num1 * $num2;
+            break;
+        case "divide":
+            if($num2 != 0) {
+                $result = $num1 / $num2;
+            }else{
+                $result = "Division by zero not allowed";
+            }
+            break;
+        default:
+            $result = "Operation Selection Failed";
+            break;
+    }
+    //output result here
+    echo "<h2>Result: $result</h2>";
 
 ?>
     
